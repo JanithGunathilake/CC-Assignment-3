@@ -3,61 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment 3 - Cloud Computing</title>
+    <title>Cloud Computing Assignment 3</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
             background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
         }
         header {
-            background-color: #4CAF50;
+            background-color: #0078D4;
             color: white;
-            padding: 10px;
+            padding: 10px 0;
             text-align: center;
         }
+        main {
+            margin: 20px auto;
+            max-width: 900px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #0078D4;
+        }
         section {
-            margin: 20px 0;
+            margin-bottom: 30px;
+        }
+        .screenshot {
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #0078D4;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
         }
         img {
             max-width: 100%;
-            height: auto;
         }
     </style>
 </head>
 <body>
+
     <header>
-        <h1>Cloud Computing Assignment 3: AWS Hosting Solution</h1>
+        <h1>Cloud Computing Assignment 3 - Student Records Web Application</h1>
     </header>
 
-    <section>
-        <h2>Introduction</h2>
-        <p>This static webpage provides an overview of the cloud solution for the student records web application, hosted on AWS as part of the Cloud Computing Assignment 3. The web application is designed to be highly available, scalable, load balanced, and secure.</p>
-    </section>
+    <main>
+        <section>
+            <h2>Introduction</h2>
+            <p>This static web page provides a detailed overview of the cloud-based solution created using Azure for hosting a student records web application. The architecture was designed to meet the requirements of availability, scalability, security, and performance.</p>
+        </section>
 
-    <section>
-        <h2>Architecture Overview</h2>
-        <p>The architecture consists of the following components:</p>
-        <ul>
-            <li><strong>EC2 Instances</strong> to host the web application</li>
-            <li><strong>Amazon RDS</strong> for the student records database</li>
-            <li><strong>Elastic Load Balancer</strong> to balance the traffic</li>
-            <li><strong>Auto Scaling</strong> for scalability during peak load times</li>
-            <li><strong>Security Groups</strong> to control access</li>
-        </ul>
-    </section>
+        <section>
+            <h2>Solution Architecture</h2>
+            <p>The following diagram represents the cloud architecture implemented for the web application, built following Azure best practices:</p>
+            <img src="architecture-diagram.png" alt="Architecture Diagram" class="screenshot">
+        </section>
 
-    <section>
-        <h2>Screenshots</h2>
-        <img src="ec2-setup.png" alt="EC2 Setup">
-        <img src="rds-setup.png" alt="RDS Setup">
-        <img src="load-balancer.png" alt="Load Balancer">
-    </section>
+        <section>
+            <h2>Azure Configurations</h2>
+            <h3>1. Azure App Service</h3>
+            <p>Azure App Service is used to host the web application, providing auto-scaling and high availability.</p>
+            <img src="app-service-setup.png" alt="Azure App Service Setup" class="screenshot">
 
-    <section>
-        <h2>Conclusion</h2>
-        <p>This solution demonstrates the use of AWS services like EC2, RDS, and Load Balancing to host a web application in a secure and scalable manner. The static webpage itself is hosted using Amazon S3.</p>
-    </section>
+            <h3>2. Azure SQL Database</h3>
+            <p>The student records are stored in an Azure SQL Database, which is securely hosted within a private subnet.</p>
+            <img src="sql-database-setup.png" alt="Azure SQL Database Setup" class="screenshot">
+
+            <h3>3. Load Balancer</h3>
+            <p>An Azure Load Balancer is used to distribute incoming traffic across multiple instances of the web application.</p>
+            <img src="load-balancer-setup.png" alt="Azure Load Balancer Setup" class="screenshot">
+
+            <h3>4. Security Configurations</h3>
+            <p>Network Security Groups (NSG) were used to secure access to the database and web servers.</p>
+            <img src="security-setup.png" alt="NSG and Security Configurations" class="screenshot">
+        </section>
+
+        <section>
+            <h2>Conclusion</h2>
+            <p>The Azure-based solution was successfully implemented, ensuring that the student records web application is highly available, secure, and scalable. This POC demonstrates how cloud infrastructure can enhance the performance and reliability of web applications.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 - ABC University - Cloud Computing Assignment</p>
+    </footer>
+
 </body>
 </html>
